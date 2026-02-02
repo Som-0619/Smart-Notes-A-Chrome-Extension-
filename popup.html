@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smart Notes</title>
+
+  <style>
+    body {
+      padding: 14px;
+      width: 340px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      box-sizing: border-box;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      background: #6366f1;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 14px 0;
+    }
+
+    .note {
+      background: white;
+      padding: 12px;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .note-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .note-title {
+      font-size: 13px;
+      font-weight: 600;
+      flex: 1;
+      margin-right: 8px;
+    }
+
+    .delete {
+      background: transparent;
+      border: none;
+      color: #ef4444;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .delete:hover {
+      color: #dc2626;
+    }
+
+    small {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    em {
+      font-size: 11px;
+      color: #6b7280;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .tags {
+      font-size: 11px;
+      color: #6366f1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input id="intentInput" placeholder="Why did you save this?" />
+  <button id="saveIntent">Attach to last note</button>
+
+  <hr />
+
+  <div id="notes"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

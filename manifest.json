@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Notes That Remember",
+  "version": "1.0",
+  "description": "Context-aware smart notes",
+  "permissions": ["storage", "contextMenus", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
